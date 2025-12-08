@@ -33,6 +33,8 @@ export const metadata: Metadata = {
     "Kubernetes",
     "Docker",
     "Computer Vision",
+    "Artificial Intelligence",
+    "Machine Learning",
     "St. Louis",
     "Washington University"
   ],
