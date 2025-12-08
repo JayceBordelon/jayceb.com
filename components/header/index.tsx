@@ -17,7 +17,7 @@ export default function Header() {
           className="flex items-center transition-opacity hover:opacity-80"
         >
           <Image
-            src="/jb.png"
+            src="/images/jb.png"
             alt="Jayce Bordelon"
             width={48}
             height={48}

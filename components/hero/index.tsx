@@ -50,7 +50,7 @@ export default function HeroSection() {
           <div className="relative">
             <div className="absolute -inset-2 bg-primary/20 blur-2xl rounded-3xl" />
             <Image
-              src="/headshot.jpg"
+              src="/images/headshot.jpg"
               alt="Jayce Bordelon"
               width={280}
               height={280}
