@@ -17,7 +17,7 @@ export default function Header() {
           className="flex items-center transition-opacity hover:opacity-80"
         >
           <Image
-            src="/images/jb.png"
+            src="/images/logo.png"
             alt="Jayce Bordelon"
             width={48}
             height={48}
@@ -26,14 +26,14 @@ export default function Header() {
         </button>
 
         <nav className="flex items-center gap-4">
-          <Button variant="ghost" size="sm" asChild>
+          <Button variant="outline" size="sm" asChild>
             <Link href="https://jayceb.blog" target="_blank" rel="noopener noreferrer">
               Blog
               <ExternalLink className="ml-1.5 h-3 w-3" />
             </Link>
           </Button>
 
-          <Button variant="outline" size="sm" asChild>
+          <Button size="sm" asChild>
             <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-1.5 h-4 w-4" />
               Resume

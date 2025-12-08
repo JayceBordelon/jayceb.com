@@ -17,7 +17,7 @@ import { toast } from "sonner";
 const roles = [
   { title: "Software Engineer", company: "Mastercard", link: null },
   { title: "Co-Founder & CTO", company: "OccupAI", link: "https://occupai.us" },
-  { title: "Computer Science Alumni", company: "WashU '25", link: null },
+  { title: "Computer Science Alumnus", company: "WashU '25", link: null },
 ];
 
 export default function HeroSection() {
@@ -104,17 +104,17 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.p
-            className="mt-4 text-muted-foreground max-w-md"
+            className="mt-4 text-muted-background max-w-md"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-            Building globally scalable systems with microservice cloud orchestration and artificial intelligence.
-          </motion.p>
+            Building resilient cloud infrastructure for transaction processing and high-performance AI agents that drive operational intelligence at scale.            
+        </motion.p>
 
           {/* Links */}
           <motion.div
-            className="mt-6 flex flex-wrap items-center justify-center md:justify-start gap-3"
+            className="mt-6 flex flex-wrap items-center justify-between w-full md:justify-around"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -133,7 +133,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline" size="icon" asChild className="cursor-alias">
+                  <Button  size="icon" asChild className="cursor-alias">
                     <Link href="https://github.com/JayceBordelon" target="_blank">
                       <IconBrandGithub className="h-4 w-4" />
                     </Link>
@@ -146,7 +146,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline" size="icon" asChild className="cursor-alias">
+                  <Button  size="icon" asChild className="cursor-alias">
                     <Link href="https://linkedin.com/in/JayceBordelon" target="_blank">
                       <IconBrandLinkedin className="h-4 w-4" />
                     </Link>
@@ -159,7 +159,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button variant="outline" size="icon" asChild className="cursor-alias">
+                  <Button  size="icon" asChild className="cursor-alias">
                     <Link href="https://jayceb.blog" target="_blank">
                       <IconWriting className="h-4 w-4" />
                     </Link>

@@ -4,22 +4,22 @@
 import { motion } from 'framer-motion';
 
 function FloatingPaths({ position }: { position: number }) {
-  const paths = Array.from({ length: 50 }, (_, i) => ({
+  const paths = Array.from({ length: 75 }, (_, i) => ({
     id: i,
-    d: `M-${380 - i * 8 * position} -${189 + i * 10}C-${
-      380 - i * 8 * position
-    } -${189 + i * 10} -${312 - i * 8 * position} ${216 - i * 10} ${
-      152 - i * 8 * position
-    } ${343 - i * 10}C${616 - i * 8 * position} ${470 - i * 10} ${
-      684 - i * 8 * position
-    } ${875 - i * 10} ${684 - i * 8 * position} ${875 - i * 10}`,
+    d: `M-${600 - i * 12 * position} -${189 + i * 10}C-${
+      600 - i * 12 * position
+    } -${189 + i * 10} -${500 - i * 12 * position} ${216 - i * 10} ${
+      300 - i * 12 * position
+    } ${343 - i * 10}C${900 - i * 12 * position} ${470 - i * 10} ${
+      1000 - i * 12 * position
+    } ${875 - i * 10} ${1000 - i * 12 * position} ${875 - i * 10}`,
     width: 0.5 + i * 0.03,
   }));
 
   return (
     <svg
       className="w-full h-full text-primary"
-      viewBox="-200 -400 1200 1200"
+      viewBox="-800 -600 3000 1400"
       fill="none"
       preserveAspectRatio="xMidYMid slice"
     >
