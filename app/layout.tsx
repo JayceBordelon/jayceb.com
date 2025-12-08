@@ -3,7 +3,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 
 import "./globals.css";
 import { ThemeProvider } from "next-themes";
-import { BackgroundBeams } from "@/components/ui/shadcn-io/background-beams";
+import { BackgroundPaths } from "@/components/ui/shadcn-io/background-paths";
+import { Toaster } from "sonner";
 
 
 const geistSans = Geist({
@@ -80,7 +81,8 @@ export default function RootLayout({
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem={true}>
           {children}
-          <BackgroundBeams />
+          <BackgroundPaths/>
+          <Toaster theme="system" richColors/>
         </ThemeProvider>
       </body>
     </html>
