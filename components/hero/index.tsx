@@ -17,7 +17,7 @@ import { toast } from "sonner";
 const roles = [
   { title: "Software Engineer", company: "Mastercard", link: null },
   { title: "Co-Founder & CTO", company: "OccupAI", link: "https://occupai.us" },
-  { title: "Computer Science Alumnus", company: "WashU '25", link: null },
+  { title: "CS Alumnus", company: "WashU '25", link: null },
 ];
 
 export default function HeroSection() {
@@ -52,8 +52,8 @@ export default function HeroSection() {
             <Image
               src="/images/headshot.jpg"
               alt="Jayce Bordelon"
-              width={280}
-              height={280}
+              width={200}
+              height={200}
               className="relative rounded-2xl object-cover"
               priority
             />
@@ -133,7 +133,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-alias">
+                  <Button  size="icon" asChild className="cursor-pointer">
                     <Link href="https://occupai.us" target="_blank">
                       <Image width={24} height={24} src="/images/occy.png" alt="occy" />
                     </Link>
@@ -146,7 +146,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-alias">
+                  <Button  size="icon" asChild className="cursor-pointer">
                     <Link href="https://github.com/JayceBordelon" target="_blank">
                       <IconBrandGithub className="h-4 w-4" />
                     </Link>
@@ -159,7 +159,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-alias">
+                  <Button  size="icon" asChild className="cursor-pointer">
                     <Link href="https://linkedin.com/in/JayceBordelon" target="_blank">
                       <IconBrandLinkedin className="h-4 w-4" />
                     </Link>
@@ -172,7 +172,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-alias">
+                  <Button  size="icon" asChild className="cursor-pointer">
                     <Link href="https://jayceb.blog" target="_blank">
                       <IconWriting className="h-4 w-4" />
                     </Link>
