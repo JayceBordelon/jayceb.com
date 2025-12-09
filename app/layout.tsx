@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     siteName: "Jayce Bordelon",
     images: [
       {
-        url: "/headshot.jpg",
+        url: "/images/headshot.jpg",
         width: 800,
         height: 800,
         alt: "Jayce Bordelon - Software Engineer",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Jayce Bordelon | Software Engineer",
     description: "Software Engineer at Mastercard specializing in microservices, distributed systems, and full-stack development.",
-    images: ["/headshot.jpg"],
+    images: ["/images/headshot.jpg"],
   },
   robots: {
     index: true,
