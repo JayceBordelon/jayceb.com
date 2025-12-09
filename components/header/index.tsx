@@ -34,7 +34,7 @@ export default function Header() {
           </Button>
 
           <Button size="sm" asChild>
-            <Link href="/resume.pdf" target="_blank" rel="noopener noreferrer">
+            <Link href="/Resume.pdf" target="_blank" rel="noopener noreferrer">
               <FileText className="mr-1.5 h-4 w-4" />
               Resume
             </Link>
