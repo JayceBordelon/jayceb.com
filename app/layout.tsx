@@ -8,7 +8,7 @@ import { Toaster } from "sonner";
 
 export const metadata: Metadata = {
   title: "Jayce Bordelon | Software Engineer",
-  description: "Software Engineer at Mastercard specializing in microservices, distributed systems, and full-stack development. Co-Founder & CTO of OccupAI. Washington University in St. Louis CS graduate.",
+  description: "Software Engineer at Mastercard specializing in microservices, distributed systems, and full-stack development. Co-Founder of OccupAI. Washington University in St. Louis CS graduate.",
   keywords: [
     "Jayce Bordelon",
     "Software Engineer",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://jayceb.com",
     title: "Jayce Bordelon | Software Engineer",
-    description: "Software Engineer at Mastercard specializing in microservices, distributed systems, and full-stack development. Co-Founder & CTO of OccupAI.",
+    description: "Software Engineer at Mastercard specializing in microservices, distributed systems, and full-stack development. Co-Founder  of OccupAI.",
     siteName: "Jayce Bordelon",
     images: [
       {

@@ -16,7 +16,7 @@ import { toast } from "sonner";
 
 const roles = [
   { title: "Software Engineer", company: "Mastercard", link: null },
-  { title: "Co-Founder & CTO", company: "OccupAI", link: "https://occupai.us" },
+  { title: "Co-Founder", company: "OccupAI", link: "https://occupai.us" },
   { title: "CS Alumnus", company: "WashU '25", link: null },
 ];
 
