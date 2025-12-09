@@ -21,7 +21,6 @@ export default function Header() {
             alt="Jayce Bordelon"
             width={48}
             height={48}
-            className="cursor-pointer"
           />
         </button>
 

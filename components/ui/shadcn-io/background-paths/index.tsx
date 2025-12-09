@@ -4,26 +4,28 @@
 import { motion } from 'framer-motion';
 
 function FloatingPaths({ position }: { position: number }) {
-  const spread = 1.6;
+  const spread = 2.4; 
+  const verticalSpacing = 18; 
+  const horizontalSpacing = 20; 
 
-  const paths = Array.from({ length: 75 }, (_, i) => ({
+  const paths = Array.from({ length: 50 }, (_, i) => ({ 
     id: i,
-    d: `M-${600 * spread - i * 12 * position} -${189 + i * 10}C-${
-      600 * spread - i * 12 * position
-    } -${189 + i * 10} -${500 * spread - i * 12 * position} ${
-      216 - i * 10
-    } ${300 * spread - i * 12 * position} ${343 - i * 10}C${
-      900 * spread - i * 12 * position
-    } ${470 - i * 10} ${1000 * spread - i * 12 * position} ${875 - i * 10} ${
-      1000 * spread - i * 12 * position
-    } ${875 - i * 10}`,
-    width: 0.5 + i * 0.03,
+    d: `M-${600 * spread - i * horizontalSpacing * position} -${189 + i * verticalSpacing}C-${
+      600 * spread - i * horizontalSpacing * position
+    } -${189 + i * verticalSpacing} -${500 * spread - i * horizontalSpacing * position} ${
+      216 - i * verticalSpacing
+    } ${300 * spread - i * horizontalSpacing * position} ${343 - i * verticalSpacing}C${
+      900 * spread - i * horizontalSpacing * position
+    } ${470 - i * verticalSpacing} ${1000 * spread - i * horizontalSpacing * position} ${875 - i * verticalSpacing} ${
+      1000 * spread - i * horizontalSpacing * position
+    } ${875 - i * verticalSpacing}`,
+    width: 0.6 + i * 0.05, 
   }));
 
   return (
     <svg
       className="w-full h-full text-primary"
-      viewBox={`${-1000 * spread} -800 ${3000 * spread} 1400`}
+      viewBox={`${-1200 * spread} -1300 ${3000 * spread} 2000`} 
       fill="none"
       preserveAspectRatio="xMidYMid slice"
     >
@@ -34,15 +36,15 @@ function FloatingPaths({ position }: { position: number }) {
           d={path.d}
           stroke="currentColor"
           strokeWidth={path.width}
-          strokeOpacity={0.1 + path.id * 0.03}
-          initial={{ pathLength: 0.3, opacity: 0.6 }}
+          strokeOpacity={0.08 + path.id * 0.015} 
+          initial={{ pathLength: 0.3, opacity: 0.5 }}
           animate={{
             pathLength: 1,
-            opacity: [0.3, 0.6, 0.3],
+            opacity: [0.25, 0.5, 0.25],
             pathOffset: [0, 1, 0],
           }}
           transition={{
-            duration: 20 + Math.random() * 10,
+            duration: 25 + Math.random() * 15, 
             repeat: Number.POSITIVE_INFINITY,
             ease: 'linear',
           }}

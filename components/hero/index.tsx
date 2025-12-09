@@ -38,7 +38,7 @@ export default function HeroSection() {
   const currentRole = roles[roleIndex];
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-6 pt-20">
+    <section className="min-h-screen flex items-center justify-center px-6">
       <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-12">
         {/* Headshot */}
         <motion.div
@@ -52,9 +52,9 @@ export default function HeroSection() {
             <Image
               src="/images/headshot.jpg"
               alt="Jayce Bordelon"
-              width={200}
-              height={200}
-              className="relative rounded-2xl object-cover"
+              width={240}
+              height={240}
+              className="relative rounded-2xl w-48 md:w-56 lg:w-60 h-auto"
               priority
             />
           </div>
