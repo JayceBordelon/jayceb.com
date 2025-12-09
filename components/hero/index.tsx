@@ -134,6 +134,19 @@ export default function HeroSection() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button  size="icon" asChild className="cursor-alias">
+                    <Link href="https://occupai.us" target="_blank">
+                      <Image width={24} height={24} src="/images/occy.png" alt="occy" />
+                    </Link>
+                  </Button>
+                </TooltipTrigger>
+                <TooltipContent>
+                  <p>OccupAI</p>
+                </TooltipContent>
+              </Tooltip>
+
+              <Tooltip>
+                <TooltipTrigger asChild>
+                  <Button  size="icon" asChild className="cursor-alias">
                     <Link href="https://github.com/JayceBordelon" target="_blank">
                       <IconBrandGithub className="h-4 w-4" />
                     </Link>
