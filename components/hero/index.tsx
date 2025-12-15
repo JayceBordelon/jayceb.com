@@ -38,8 +38,8 @@ export default function HeroSection() {
   const currentRole = roles[roleIndex];
 
   return (
-    <section className="flex items-center justify-center px-6 h-full">
-      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-12">
+    <section className="flex items-center justify-center px-4 sm:px-6 min-h-screen py-8">
+      <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-6 md:gap-12">
         {/* Headshot */}
         <motion.div
           className="shrink-0"
@@ -54,7 +54,7 @@ export default function HeroSection() {
               alt="Jayce Bordelon"
               width={240}
               height={240}
-              className="relative rounded-2xl w-48 md:w-56 lg:w-60 h-auto"
+              className="relative rounded-2xl w-36 sm:w-48 md:w-56 lg:w-60 h-auto"
               priority
             />
           </div>
@@ -63,7 +63,7 @@ export default function HeroSection() {
         {/* Content */}
         <div className="text-center md:text-left">
           <motion.h1
-            className="text-4xl sm:text-5xl font-bold tracking-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -73,7 +73,7 @@ export default function HeroSection() {
 
           {/* Animated Role */}
           <motion.div
-            className="mt-2 h-8 overflow-hidden"
+            className="mt-2 h-7 sm:h-8 overflow-hidden"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -81,7 +81,7 @@ export default function HeroSection() {
             <AnimatePresence mode="wait">
               <motion.p
                 key={roleIndex}
-                className="text-xl text-muted-foreground"
+                className="text-base sm:text-xl text-muted-foreground"
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 exit={{ y: -20, opacity: 0 }}
@@ -104,7 +104,7 @@ export default function HeroSection() {
           </motion.div>
 
           <motion.p
-            className="mt-4 text-muted-background max-w-md"
+            className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-background max-w-md"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
@@ -114,7 +114,7 @@ export default function HeroSection() {
 
           {/* Links */}
           <motion.div
-            className="mt-6 flex flex-wrap items-center justify-between w-full md:justify-around"
+            className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center md:justify-around gap-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
@@ -122,7 +122,7 @@ export default function HeroSection() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button onClick={handleClick} className="cursor-pointer">
+                  <Button onClick={handleClick} size="icon" className="cursor-pointer">
                     <IconMail className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
@@ -133,7 +133,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-pointer">
+                  <Button size="icon" asChild className="cursor-pointer">
                     <Link href="https://occupai.us" target="_blank">
                       <Image width={24} height={24} src="/images/occy.png" alt="occy" />
                     </Link>
@@ -146,7 +146,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-pointer">
+                  <Button size="icon" asChild className="cursor-pointer">
                     <Link href="https://github.com/JayceBordelon" target="_blank">
                       <IconBrandGithub className="h-4 w-4" />
                     </Link>
@@ -159,7 +159,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-pointer">
+                  <Button size="icon" asChild className="cursor-pointer">
                     <Link href="https://linkedin.com/in/JayceBordelon" target="_blank">
                       <IconBrandLinkedin className="h-4 w-4" />
                     </Link>
@@ -172,7 +172,7 @@ export default function HeroSection() {
 
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button  size="icon" asChild className="cursor-pointer">
+                  <Button size="icon" asChild className="cursor-pointer">
                     <Link href="https://jayceb.blog" target="_blank">
                       <IconWriting className="h-4 w-4" />
                     </Link>
