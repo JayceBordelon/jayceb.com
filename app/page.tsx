@@ -3,9 +3,9 @@ import HeroSection from "@/components/hero";
 
 export default function page() {
   return (
-    <div>
+    <main className="h-screen">
       <Header />
       <HeroSection />
-    </div>
+    </main>
   )
 }
