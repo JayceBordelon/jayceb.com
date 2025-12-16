@@ -38,7 +38,7 @@ export default function HeroSection() {
   const currentRole = roles[roleIndex];
 
   return (
-    <section className="flex items-center justify-center px-4 h-screen">
+    <section className="flex items-center justify-center px-4 h-screen overflow-y-hidden">
       <div className="max-w-4xl w-full flex flex-col md:flex-row items-center gap-6 md:gap-12">
         {/* Headshot */}
         <motion.div
