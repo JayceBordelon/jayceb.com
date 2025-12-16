@@ -4,28 +4,32 @@
 import { motion } from 'framer-motion';
 
 function FloatingPaths({ position }: { position: number }) {
-  const spread = 2.4; 
-  const verticalSpacing = 18; 
-  const horizontalSpacing = 20; 
+  const spread = 3; 
+  const verticalSpacing = 22; 
+  const horizontalSpacing = 22; 
 
-  const paths = Array.from({ length: 50 }, (_, i) => ({ 
-    id: i,
-    d: `M-${600 * spread - i * horizontalSpacing * position} -${189 + i * verticalSpacing}C-${
-      600 * spread - i * horizontalSpacing * position
-    } -${189 + i * verticalSpacing} -${500 * spread - i * horizontalSpacing * position} ${
-      216 - i * verticalSpacing
-    } ${300 * spread - i * horizontalSpacing * position} ${343 - i * verticalSpacing}C${
-      900 * spread - i * horizontalSpacing * position
-    } ${470 - i * verticalSpacing} ${1000 * spread - i * horizontalSpacing * position} ${875 - i * verticalSpacing} ${
-      1000 * spread - i * horizontalSpacing * position
-    } ${875 - i * verticalSpacing}`,
-    width: 0.6 + i * 0.05, 
-  }));
+const paths = Array.from({ length: 50 }, (_, i) => {
+    const wave = Math.sin(i * 0.3) * 50;
+    
+    return {
+      id: i,
+      d: `M-${600 * spread - i * horizontalSpacing * position} -${189 + i * verticalSpacing}C-${
+        600 * spread - i * horizontalSpacing * position
+      } -${189 + i * verticalSpacing + wave} -${500 * spread - i * horizontalSpacing * position} ${
+        216 - i * verticalSpacing + wave
+      } ${300 * spread - i * horizontalSpacing * position} ${343 - i * verticalSpacing}C${
+        900 * spread - i * horizontalSpacing * position
+      } ${470 - i * verticalSpacing + wave} ${1000 * spread - i * horizontalSpacing * position} ${875 - i * verticalSpacing + wave} ${
+        1000 * spread - i * horizontalSpacing * position
+      } ${875 - i * verticalSpacing}`,
+      width: 0.6 + i * 0.05,
+    };
+  });
 
   return (
     <svg
       className="w-full h-full text-primary"
-      viewBox={`${-1200 * spread} -1300 ${3000 * spread} 2000`} 
+      viewBox={`${-1200 * spread} -1200 ${3000 * spread} 2000`} 
       fill="none"
       preserveAspectRatio="xMidYMid slice"
     >
@@ -44,7 +48,8 @@ function FloatingPaths({ position }: { position: number }) {
             pathOffset: [0, 1, 0],
           }}
           transition={{
-            duration: 25 + Math.random() * 15, 
+            duration: 30, 
+            delay: Math.random() * 2.5,
             repeat: Number.POSITIVE_INFINITY,
             ease: 'linear',
           }}
