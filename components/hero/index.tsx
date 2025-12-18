@@ -109,7 +109,7 @@ export default function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.3 }}
           >
-          Working on scalable cloud infrastructure for payments and AI-powered automation.        
+          Working on scalable cloud infrastructure for payments and AI-powered venue management automation.        
           </motion.p>
 
           {/* Links */}
