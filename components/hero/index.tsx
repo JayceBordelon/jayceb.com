@@ -2,8 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import {
   Tooltip,
@@ -13,29 +12,13 @@ import {
 } from "@/components/ui/tooltip";
 import { IconBrandGithub, IconBrandLinkedin, IconMail, IconWriting } from "@tabler/icons-react";
 import { toast } from "sonner";
-
-const roles = [
-  { title: "Software Engineer", company: "Mastercard", link: null },
-  { title: "Co-Founder", company: "OccupAI", link: "https://occupai.us" },
-  { title: "CS Alumnus", company: "WashU '25", link: null },
-];
+import TypingText from "@/components/ui/shadcn-io/typing-text";
 
 export default function HeroSection() {
-  const [roleIndex, setRoleIndex] = useState(0);
-
   const handleClick = async () => {
     navigator.clipboard.writeText("jayce@occupai.us");
     toast.success("Copied jayce@occupai.us to clipboard!");
   };
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 4000);
-    return () => clearInterval(interval);
-  }, []);
-
-  const currentRole = roles[roleIndex];
 
   return (
     <section className="flex items-center justify-center px-4 h-screen">
@@ -61,9 +44,9 @@ export default function HeroSection() {
         </motion.div>
 
         {/* Content */}
-        <div className="text-center md:text-left">
+        <div className="text-center ">
           <motion.h1
-            className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight"
+            className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight bg-gradient-to-l from-primary to-white bg-clip-text text-transparent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
@@ -71,46 +54,29 @@ export default function HeroSection() {
             Jayce Bordelon
           </motion.h1>
 
-          {/* Animated Role */}
+          {/* Typing Text Role */}
           <motion.div
-            className="mt-2 h-7 sm:h-8 overflow-hidden"
+            className="mt-2 h-7 sm:h-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
           >
-            <AnimatePresence mode="wait">
-              <motion.p
-                key={roleIndex}
-                className="text-base sm:text-xl text-muted-foreground"
-                initial={{ y: 20, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                exit={{ y: -20, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-              >
-                {currentRole.link ? (
-                  <Link
-                    href={currentRole.link}
-                    target="_blank"
-                    className="text-primary underline underline-offset-4 hover:text-primary/80"
-                  >
-                    {currentRole.company}
-                  </Link>
-                ) : (
-                  <span className="text-foreground">{currentRole.company}</span>
-                )}
-                {" ┃ "} {currentRole.title}
-              </motion.p>
-            </AnimatePresence>
+            <TypingText
+              text={[
+                "Mastercard - SWE",
+                "OccupAI - Co-Founder",
+                "WashU - CS Alumn"
+              ]}
+              typingSpeed={60}
+              pauseDuration={4000}
+              deletingSpeed={40}
+              showCursor={true}
+              cursorClassName="h-5 sm:h-6"
+              className="text-2xl sm:text-4xl bg-gradient-to-r from-primary to-white bg-clip-text text-transparent"
+              variableSpeed={{ min: 50, max: 80 }}
+              loop={true}
+            />
           </motion.div>
-
-          <motion.p
-            className="mt-3 sm:mt-4 text-sm sm:text-base text-muted-background max-w-md"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3 }}
-          >
-          Working on scalable cloud infrastructure for payments and AI-powered venue management automation.        
-          </motion.p>
 
           {/* Links */}
           <motion.div
