@@ -56,7 +56,7 @@ export default function HeroSection() {
 
           {/* Typing Text Role */}
           <motion.div
-            className="mt-2 h-7 sm:h-8"
+            className="my-2 h-7 sm:h-8"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
@@ -71,8 +71,8 @@ export default function HeroSection() {
               pauseDuration={4000}
               deletingSpeed={40}
               showCursor={true}
-              cursorClassName="h-5 sm:h-6"
-              className="text-2xl sm:text-4xl bg-gradient-to-r from-primary to-white bg-clip-text text-transparent"
+              cursorClassName="h-10 w-1 bg-primary inline-block ml-1"
+              className="text-2xl sm:text-4xl bg-gradient-to-l from-primary  to-white bg-clip-text text-transparent"
               variableSpeed={{ min: 50, max: 80 }}
               loop={true}
             />
@@ -80,7 +80,7 @@ export default function HeroSection() {
 
           {/* Links */}
           <motion.div
-            className="mt-4 sm:mt-6 flex flex-wrap items-center justify-center md:justify-around gap-2"
+            className="mt-8 flex flex-wrap items-center justify-center md:justify-around gap-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.4 }}
