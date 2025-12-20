@@ -10,7 +10,12 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from "@/components/ui/tooltip";
-import { IconBrandGithub, IconBrandLinkedin, IconMail, IconWriting } from "@tabler/icons-react";
+import {
+  IconBrandGithub,
+  IconBrandLinkedin,
+  IconMail,
+  IconWriting,
+} from "@tabler/icons-react";
 import { toast } from "sonner";
 import TypingText from "@/components/ui/shadcn-io/typing-text";
 
@@ -65,7 +70,7 @@ export default function HeroSection() {
               text={[
                 "Mastercard - SWE",
                 "OccupAI - Co-Founder",
-                "WashU - CS Alumn"
+                "WashU - CS Alum",
               ]}
               typingSpeed={60}
               pauseDuration={4000}
@@ -88,7 +93,11 @@ export default function HeroSection() {
             <TooltipProvider>
               <Tooltip>
                 <TooltipTrigger asChild>
-                  <Button onClick={handleClick} size="icon" className="cursor-pointer">
+                  <Button
+                    onClick={handleClick}
+                    size="icon"
+                    className="cursor-pointer"
+                  >
                     <IconMail className="h-4 w-4" />
                   </Button>
                 </TooltipTrigger>
@@ -101,7 +110,12 @@ export default function HeroSection() {
                 <TooltipTrigger asChild>
                   <Button size="icon" asChild className="cursor-pointer">
                     <Link href="https://occupai.us" target="_blank">
-                      <Image width={24} height={24} src="/images/occy.png" alt="occy" />
+                      <Image
+                        width={24}
+                        height={24}
+                        src="/images/occy.png"
+                        alt="occy"
+                      />
                     </Link>
                   </Button>
                 </TooltipTrigger>
@@ -113,7 +127,10 @@ export default function HeroSection() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button size="icon" asChild className="cursor-pointer">
-                    <Link href="https://github.com/JayceBordelon" target="_blank">
+                    <Link
+                      href="https://github.com/JayceBordelon"
+                      target="_blank"
+                    >
                       <IconBrandGithub className="h-4 w-4" />
                     </Link>
                   </Button>
@@ -126,7 +143,10 @@ export default function HeroSection() {
               <Tooltip>
                 <TooltipTrigger asChild>
                   <Button size="icon" asChild className="cursor-pointer">
-                    <Link href="https://linkedin.com/in/JayceBordelon" target="_blank">
+                    <Link
+                      href="https://linkedin.com/in/JayceBordelon"
+                      target="_blank"
+                    >
                       <IconBrandLinkedin className="h-4 w-4" />
                     </Link>
                   </Button>
